@@ -6,21 +6,22 @@ const quickLinks = [
     label: "Om kören",
     sublabel: "Läs mer om",
     href: "/om-koren",
-    img: "/images/quicklink-1.jpg",
+    img: "/images/historia.png",
     pos: "posLeftTop",
+    bgPosition: "top"
   },
   {
     label: "Sjung med!",
     sublabel: "Läs mer om",
     href: "/sjung-med",
-    img: "/images/quicklink-2.jpg",
+    img: "/images/sjung-med.jpg",
     pos: "posLeftBottom",
   },
   {
     label: "Hyr oss",
     sublabel: "Läs mer om",
     href: "/hyr-oss",
-    img: "/images/quicklink-3.jpg",
+    img: "/images/hyr.jpg",
     pos: "posMidTall",
   },
   {
@@ -34,14 +35,15 @@ const quickLinks = [
     label: "Skivor",
     sublabel: "Läs mer om",
     href: "/skivor",
-    img: "/images/quicklink-5.jpg",
+    img: "/images/skiva.jpg",
     pos: "posThirdBottom",
+    bgPosition: "center 25%"
   },
   {
     label: "Vännerna",
     sublabel: "Läs mer om",
     href: "/vannerna",
-    img: "/images/quicklink-6.jpg",
+    img: "/images/vannerna.jpg",
     pos: "posRightTall",
   },
 ] as const;
@@ -61,7 +63,7 @@ export default function QuickLinks() {
           >
             <div
               className={styles.image}
-              style={{ backgroundImage: `url(${item.img})` }}
+              style={{ backgroundImage: `url(${item.img})`, backgroundPosition: "bgPosition" in item && item.bgPosition ? item.bgPosition : "center" }}
             />
             <div className={styles.text}>
               <div className={styles.sublabel}>{item.sublabel}</div>

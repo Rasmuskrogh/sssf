@@ -32,6 +32,7 @@
   align-items: flex-start;
   gap: 0.75rem;
   margin: 0;
+  padding-right: 4rem;
 }
 
 .formRow {
@@ -43,9 +44,9 @@
 .input {
   border-radius: 0;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  background: transparent;
+  background: white;
   color: var(--color-white);
-  padding: 0.75rem 1.2rem;
+  padding: 0.75rem 18rem 0.75rem 1rem;
   font-family: var(--font-body);
   font-size: 0.9rem;
   outline: none;
@@ -89,4 +90,3 @@
     flex: 1;
   }
 }
-

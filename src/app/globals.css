@@ -58,6 +58,17 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.2s ease, filter 0.2s ease, background 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px) scale(1.02);
+  filter: brightness(1.08);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--color-accent-alt);
+  outline-offset: 3px;
 }
 
 .btn-secondary {
@@ -74,4 +85,16 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  transition: transform 0.2s ease, filter 0.2s ease,
+    background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-1px) scale(1.02);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid var(--color-accent-alt);
+  outline-offset: 3px;
 }
