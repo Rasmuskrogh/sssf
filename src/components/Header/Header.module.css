@@ -23,7 +23,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 2rem;
+  padding: 1.2rem 3.75rem;
 
   /* Ensure header text stays readable even if background changes */
   color: var(--color-white);
@@ -34,13 +34,15 @@
   flex-direction: row;
   align-items: center;
   gap: 0.9rem;
-  color: var(--color-white);
+  /* color: var(--color-white); */
 }
 
 .logoEmblem {
-  width: 42px;
-  height: 42px;
+  /* width: 42px; */
+  height: 65px;
   object-fit: contain;
+  filter: invert(1);
+  margin-bottom: 0.7rem;
 }
 
 .logoText {
@@ -61,16 +63,17 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1.5rem;
+  gap: 3rem;
 }
 
 .navLink {
   font-family: var(--font-body);
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 1rem;
   letter-spacing: 0.12em;
   color: var(--color-white);
   text-decoration: none;
+  font-weight: 700;
 }
 
 .navItemDropdown {
@@ -98,6 +101,7 @@
   color: var(--color-white);
   text-decoration: none;
   padding: 0.4rem 0;
+  font-weight: 700;
 }
 
 /* Desktop dropdown on hover */
@@ -151,6 +155,7 @@
   letter-spacing: 0.12em;
   color: var(--color-white);
   text-decoration: none;
+  font-weight: 700;
 }
 
 .mobileGroup {
@@ -168,6 +173,7 @@
   text-decoration: none;
   padding-left: 1rem;
   opacity: 0.95;
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {
@@ -179,4 +185,3 @@
     display: inline-flex;
   }
 }
-

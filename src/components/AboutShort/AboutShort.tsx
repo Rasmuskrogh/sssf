@@ -9,19 +9,19 @@ export default function AboutShort() {
         <div className={styles.imageCol}>
           <div className={styles.imageWrap}>
             <Image
-              src="/images/choir-photo.jpg"
+              src="/images/sssf1.jpg"
               alt="Stockholms Studentsångare"
-              fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              style={{ objectFit: "cover" }}
+              fill
+              style={{ objectFit: "cover", objectPosition: "center" }}
               priority
             />
           </div>
         </div>
 
         <div className={styles.contentCol}>
-          <div className={styles.label}>OM OSS</div>
-          <h2 className={styles.heading}>Stockholms Studentsångare</h2>
+
+          <h2 className={styles.heading}> Om Stockholms Studentsångare</h2>
           <p className={styles.body}>
             Vi är en av Stockholms ledande akademiska manskörer med rötter i en
             lång tradition av sång, gemenskap och musikalisk excellens. Varje

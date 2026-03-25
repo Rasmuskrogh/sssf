@@ -1,29 +1,31 @@
 .section {
-  padding: 4rem 2rem;
   background: var(--color-white);
 }
 
 .heading {
   font-family: var(--font-display);
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-  text-align: left;
+  font-size: 2.5rem;
+  padding: 3rem;
+  text-align: center;
   color: var(--color-black);
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
   align-items: stretch;
+  column-gap: 0;
+  row-gap: 0;
 }
 
 .card {
   position: relative;
-  height: 240px;
+  height: 100%;
+  min-height: 0;
   display: block;
   overflow: hidden;
   text-decoration: none;
+  width: 100%;
 }
 
 .image {
@@ -40,11 +42,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0) 65%
-  );
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 65%);
   z-index: 1;
 }
 
@@ -75,26 +73,56 @@
   transform: scale(1.02);
 }
 
-.cardSpan1 {
-  grid-column: span 1;
+.posLeftTop {
+  grid-column: 1;
+  grid-row: 1;
 }
 
-.cardSpan2 {
-  grid-column: span 2;
+.posLeftBottom {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.posMidTall {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  aspect-ratio: 1 / 1;
+}
+
+.posThirdTop {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.posThirdBottom {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.posRightTall {
+  grid-column: 4;
+  grid-row: 1 / span 2;
+  aspect-ratio: 1 / 1;
 }
 
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 0;
+    row-gap: 0;
   }
 
-  .cardSpan1,
-  .cardSpan2 {
-    grid-column: span 1;
+  .posLeftTop,
+  .posLeftBottom,
+  .posMidTall,
+  .posThirdTop,
+  .posThirdBottom,
+  .posRightTall {
+    grid-column: auto;
+    grid-row: auto;
   }
 
   .card {
-    height: 220px;
+    height: 100%;
   }
 }
-

@@ -7,42 +7,42 @@ const quickLinks = [
     sublabel: "Läs mer om",
     href: "/om-koren",
     img: "/images/quicklink-1.jpg",
-    span: 1,
+    pos: "posLeftTop",
   },
   {
     label: "Sjung med!",
     sublabel: "Läs mer om",
     href: "/sjung-med",
     img: "/images/quicklink-2.jpg",
-    span: 1,
+    pos: "posLeftBottom",
   },
   {
     label: "Hyr oss",
     sublabel: "Läs mer om",
     href: "/hyr-oss",
     img: "/images/quicklink-3.jpg",
-    span: 2,
+    pos: "posMidTall",
   },
   {
     label: "Konserter",
     sublabel: "Läs mer om",
     href: "/konserter",
-    img: "/images/quicklink-4.jpg",
-    span: 2,
+    img: "/images/konsert.jpg",
+    pos: "posThirdTop",
   },
   {
     label: "Skivor",
     sublabel: "Läs mer om",
     href: "/skivor",
     img: "/images/quicklink-5.jpg",
-    span: 1,
+    pos: "posThirdBottom",
   },
   {
     label: "Vännerna",
     sublabel: "Läs mer om",
     href: "/vannerna",
     img: "/images/quicklink-6.jpg",
-    span: 1,
+    pos: "posRightTall",
   },
 ] as const;
 
@@ -56,9 +56,7 @@ export default function QuickLinks() {
           <Link
             key={item.label}
             href={item.href}
-            className={`${styles.card} ${
-              item.span === 2 ? styles.cardSpan2 : styles.cardSpan1
-            }`}
+            className={`${styles.card} ${styles[item.pos]}`}
             aria-label={item.label}
           >
             <div

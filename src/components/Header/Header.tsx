@@ -41,14 +41,14 @@ export default function Header() {
         <div className={styles.inner}>
           <Link href="/" className={styles.logoLink} aria-label="Stockholms Studentsångare">
             <img
-              src="/images/logo-emblem.png"
+              src="/images/sssf_logo.png"
               alt="Stockholms Studentsångare emblem"
               className={styles.logoEmblem}
             />
-            <div className={styles.logoText}>
+            {/* <div className={styles.logoText}>
               <span>Stockholms</span>
               <span>Studentsångare</span>
-            </div>
+            </div> */}
           </Link>
 
           <nav className={styles.nav} aria-label="Huvudnavigation">
