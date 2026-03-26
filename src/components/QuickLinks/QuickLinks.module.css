@@ -11,12 +11,16 @@
   color: var(--color-black);
 }
 
-.grid {
+.gridDesktop {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: stretch;
   column-gap: 0;
   row-gap: 0;
+}
+
+.gridMobile {
+  display: none;
 }
 
 .card {
@@ -107,23 +111,39 @@
 }
 
 @media (max-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 0;
-    row-gap: 0;
+  .gridDesktop {
+    display: none;
   }
 
+  .gridMobile {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    align-items: flex-start;
+  }
+
+  .mobileColumn {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .mobileRectCard {
+    aspect-ratio: 2 / 1;
+    height: auto;
+  }
+
+  .mobileSquareCard {
+    aspect-ratio: 1 / 1;
+    height: auto;
+  }
+
+  /* Reset desktop positional rules in mobile stacked layout */
   .posLeftTop,
   .posLeftBottom,
-  .posMidTall,
-  .posThirdTop,
-  .posThirdBottom,
-  .posRightTall {
+  .posMidTall {
     grid-column: auto;
     grid-row: auto;
-  }
-
-  .card {
-    height: 100%;
   }
 }
