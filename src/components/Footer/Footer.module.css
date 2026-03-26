@@ -1,0 +1,18 @@
+.footer {
+  width: 100%;
+  background: var(--color-black);
+  color: var(--color-white);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+

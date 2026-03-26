@@ -21,7 +21,7 @@ export default function AboutShort() {
 
         <div className={styles.contentCol}>
 
-          <h2 className={styles.heading}> Om Stockholms Studentsångare</h2>
+          <h2 className={styles.heading}> Om Stockholms Studentsångarna</h2>
           <p className={styles.body}>
             Vi är en av Stockholms ledande akademiska manskörer med rötter i en
             lång tradition av sång, gemenskap och musikalisk excellens. Varje

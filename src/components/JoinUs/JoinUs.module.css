@@ -4,7 +4,7 @@
   height: 480px;
   overflow: hidden;
 
-  background-image: url("/images/sssf2.jpg");
+  background-image: url("/images/Julkonsert.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -39,11 +39,12 @@
 
 .button {
   margin-top: 2rem;
-  transition: transform 0.2s ease, filter 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
 }
 
 .button:hover {
   transform: scale(1.03);
   filter: brightness(1.08);
 }
-
