@@ -307,6 +307,10 @@
   transform: rotate(180deg);
 }
 
+.header.menuOpen {
+  border-bottom: none;
+}
+
 @media (max-width: 1278px) {
   .inner {
     position: relative;
@@ -336,6 +340,58 @@
   }
 }
 
-.header.menuOpen {
-  border-bottom: none;
+@media (max-width: 660px) {
+  /* Keep logo in its normal position even when mobile menu is open */
+  .innerMenuOpen {
+    justify-content: space-between;
+  }
+  .inner {
+    padding: 1.2rem;
+  }
+  .hamburger {
+    right: 2.5rem;
+  }
+}
+
+@media (width < 560px) {
+  .logoEmblem {
+    height: 50px;
+    margin: 0;
+  }
+  .hamburger {
+    width: 36px;
+    height: 36px;
+  }
+  .hamburger span {
+    width: 22px;
+    height: 2px;
+  }
+  .hamburger span:nth-child(1) {
+    transform: translate(-50%, -50%) translateY(-6px);
+  }
+  .hamburger span:nth-child(3) {
+    transform: translate(-50%, -50%) translateY(6px);
+  }
+  .hamburgerOpen span:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .hamburgerOpen span:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  .inner {
+    padding: 0.3rem 0.8rem 0.8rem 0.8rem;
+  }
+  .hamburger {
+    right: 1rem;
+  }
+}
+
+@media (width < 410px) {
+  .logoEmblem {
+    height: 40px;
+    margin: 0;
+  }
+  .inner {
+    padding: 0.3rem 0.5rem 0.5rem 0.5rem;
+  }
 }

@@ -31,7 +31,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="sv">
-      <body className={`${fontDisplay.variable} ${fontBody.variable}`}>
+      <body
+        suppressHydrationWarning
+        className={`${fontDisplay.variable} ${fontBody.variable}`}
+      >
         <Header />
         <main className="appMain">{children}</main>
         <Footer />
